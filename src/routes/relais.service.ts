@@ -4,6 +4,7 @@ export class RelaisService {
     }
 
     public active = (_req, res) => {
+        console.log("active");
         res.status(200).json("OK");
     };
 }
