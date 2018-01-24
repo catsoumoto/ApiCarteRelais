@@ -15,7 +15,6 @@ export class Server {
         }));
 
         this.app.use((_req, res, next) => {
-            console.log(_req.body);
             res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT");
             res.header("Access-Control-Allow-Origin", "*");
             res.header("Access-Control-Max-Age", "86400");
@@ -43,7 +42,8 @@ export class Server {
     public initRoutes() {
         let router: express.Router;
         router = express.Router();
-        router.get("/relais/active", this.relaisService.active);
+        router.get("/relais/enable", this.relaisService.enable);
+        router.get("/relais/disable", this.relaisService.disable);
         this.app.use(router);
     }
 }

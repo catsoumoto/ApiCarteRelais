@@ -3,8 +3,13 @@ export class RelaisService {
     constructor() {
     }
 
-    public active = (_req, res) => {
-        console.log("active");
-        res.status(200).json("OK");
+    public enable = (_req, res) => {
+        console.log("enabled");
+        res.status(200).json("enabled");
+    };
+
+    public disable = (_req, res) => {
+        console.log("disabled");
+        res.status(200).json("disabled");
     };
 }
